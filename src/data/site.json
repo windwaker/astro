@@ -81,5 +81,10 @@
       "type": "WordPress",
       "repo": "https://github.com"
     }
+  ],
+  "team": [
+    {
+      "name": "me"
+    }
   ]
 }
