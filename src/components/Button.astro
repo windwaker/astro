@@ -1,10 +1,14 @@
 ---
 interface Props {
-  text: string
-  href: string;
+  text: string;
+  type: string;
 }
 
-const { text, href } = Astro.props;
+const { text, type } = Astro.props;
 ---
 
-<a href={href} class="text-white bg-primary focus:outline-none cursor-pointer focus:ring-4 focus:ring-secondary font-medium rounded-full text-sm px-5 py-2.5 text-center">{text}</a>
+<button
+  type={type}
+  class="text-white bg-primary focus:outline-none cursor-pointer focus:ring-4 focus:ring-secondary font-medium rounded-full text-sm px-5 py-2.5 text-center"
+  >{text}</button
+>
