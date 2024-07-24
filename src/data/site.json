@@ -1,6 +1,6 @@
 {
   "owner": "John Smith",
-  "siteName": "John Smith's Portfolio",
+  "siteName": "LMA Construction",
   "siteDescription": "John Smith's Portfolio for potential employers",
   "about": "I'm a web developer from Anytown, USA. I like to build things with HTML, CSS, and JavaScript.",
   "contact": {
@@ -20,6 +20,10 @@
     {
       "title": "Contact",
       "href": "/contact"
+    },
+    {
+      "title": "Dummy",
+      "href": "/dummy"
     }
   ],
   "social": [
