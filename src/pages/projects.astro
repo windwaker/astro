@@ -1,6 +1,6 @@
 ---
 const title = "Projects";
-const subtitle = "Some Projects";
+const subtitle = "Here are some project we have recently delivered ...";
 
 import Layout from "../layouts/Layout.astro";
 
@@ -34,7 +34,7 @@ type Props = {
                     repo?: string;
                     type?: string;
                   },
-                  index: number
+                  index: number,
                 ) => {
                   return (
                     <ProjectCard
@@ -45,7 +45,7 @@ type Props = {
                       repo={value.repo}
                     />
                   );
-                }
+                },
               )
             }
           </div>

@@ -9,8 +9,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      primary: "#17202A",
-      secondary: "#ecc94b",
+      primary: "#0000ff" /** #17202A */,
+      secondary: "#ff0000" /** ecc94b */,
       transparent: "transparent",
       current: "currentColor",
       slate: colors.slate,
@@ -27,17 +27,18 @@ module.exports = {
     extend: {
       translate: ["dark"],
       animation: {
-        'skew-scroll': 'skew-scroll 20s linear infinite',
+        "skew-scroll": "skew-scroll 20s linear infinite",
       },
     },
     keyframes: {
-      'skew-scroll': {
-        '0%': {
-          transform: 'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)',
-        },
-        '100%': {
+      "skew-scroll": {
+        "0%": {
           transform:
-            'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
+            "rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)",
+        },
+        "100%": {
+          transform:
+            "rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)",
         },
       },
     },

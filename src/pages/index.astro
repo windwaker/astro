@@ -1,20 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import { Icon } from "astro-icon/components";
+
 import Header from "../components/Header.astro";
 import CTA from "../components/CTA.astro";
 import FeatureList from "../components/FeatureList.astro";
-
+import Team from "../components/Team.astro";
 import Timeline from "../components/Timeline.astro";
+import ProjectDetails from "../components/ProjectDetails.astro";
 
 import data from "../data/site.json";
+import LogoCloud from "../components/LogoCloud.astro";
+import VisualImageHeading from "../components/VisualImageHeading.astro";
 ---
 
 <Layout title={data.siteName}>
   <main>
     <Header />
+    <!-- <Icon name="mdi:account" size={10} style="color:green;" /> -->
+    <VisualImageHeading />
+    <ProjectDetails />
     <CTA />
     <FeatureList />
+    <Team />
+    <LogoCloud />
     <Timeline />
   </main>
 </Layout>

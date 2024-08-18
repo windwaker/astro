@@ -14,6 +14,10 @@
       "href": "/"
     },
     {
+      "title": "Our Team",
+      "href": "/team-page"
+    },
+    {
       "title": "Projects",
       "href": "/projects"
     },
@@ -22,8 +26,8 @@
       "href": "/contact"
     },
     {
-      "title": "Dummy",
-      "href": "/dummy"
+      "title": "Our Location",
+      "href": "/location"
     },
     {
       "title": "Mission Statement",
@@ -80,11 +84,6 @@
       "about": "Some info about project 4 I'm not sure haha ok see ya",
       "type": "WordPress",
       "repo": "https://github.com"
-    }
-  ],
-  "team": [
-    {
-      "name": "me"
     }
   ]
 }

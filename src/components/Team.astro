@@ -2,34 +2,26 @@
 const title = "Our Team";
 const description = "Meet the team behind the scenes at the 2020 Hackathon.";
 
+import { Image } from "astro:assets";
+
+import nerd from "../assets/nerd.jpeg";
+import cool from "../assets/cool.jpeg";
+
 const team = [
+  {
+    name: "Nerdy McNerd",
+    image: "https://nairatips.com/wp-content/uploads/2023/04/image-579.png",
+    title: "Head of Engineering",
+    bio: "Labore dolor ea laboris quis nostrud ipsum eu nulla nostrud nulla ut aliquip. Est fugiat enim nulla ex. Aliqua aliquip do sit ut ex aliquip aute. Nostrud non nisi aliquip ex velit ut dolor veniam dolore qui proident adipisicing nisi. Aute duis veniam deserunt aliquip nostrud commodo sit. Cillum excepteur cillum veniam excepteur dolor occaecat aute ut. Labore occaecat aute minim velit consectetur magna laboris adipisicing et quis.",
+    linkedin: "https://www.linkedin.com/in/colmharrington/",
+  },
   {
     name: "Bonnie Green",
     title: "CEO & Web Developer",
-    bio: "Bonnie drives the technical strategy of the flowbite platform and brand.",
-    github: "https://www.github.com/bonnie",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-  },
-  {
-    name: "Donnie Green",
-    title: "CEO & Web Developer",
-    bio: "Donnie drives the technical strategy of the flowbite platform and brand.",
-    github: "https://www.github.com/bonnie",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-  },
-  {
-    name: "Johhny Green",
-    title: "CEO & Web Developer",
-    bio: "Johnny drives the technical strategy of the flowbite platform and brand.",
-    github: "https://www.github.com/bonnie",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-  },
-  {
-    name: "Connie Green",
-    title: "CEO & Web Developer",
-    bio: "Connie drives the technical strategy of the flowbite platform and brand.",
-    github: "https://www.github.com/bonnie",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+    bio: "Labore dolor ea laboris quis nostrud ipsum eu nulla nostrud nulla ut aliquip. Est fugiat enim nulla ex. Aliqua aliquip do sit ut ex aliquip aute. Nostrud non nisi aliquip ex velit ut dolor veniam dolore qui proident adipisicing nisi. Aute duis veniam deserunt aliquip nostrud commodo sit. Cillum excepteur cillum veniam excepteur dolor occaecat aute ut. Labore occaecat aute minim velit consectetur magna laboris adipisicing et quis.",
+    linkedin: "https://www.linkedin.com/in/colmharrington/",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
   },
 ];
 ---
@@ -52,15 +44,18 @@ const team = [
       {
         team.map((member) => (
           <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-            <img
+            {/* <img
               class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-              src={member.image}
+              src={cool.src}
               alt="Bonnie Avatar"
-            />
+              width="50"
+              height="50"
+            /> */}
+            <Image src={nerd} alt="" width={200} height={200} />
 
             <div class="p-5">
               <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href={member.github}>{member.name}</a>
+                <a href={member.linkedin}>{member.name}</a>
               </h3>
               <span class="text-gray-500 dark:text-gray-400">
                 {member.title}
@@ -71,7 +66,7 @@ const team = [
               <ul class="flex space-x-4 sm:mt-0">
                 <li>
                   <a
-                    href={member.github}
+                    href={member.linkedin}
                     class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
                   >
                     <svg
