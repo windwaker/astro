@@ -35,10 +35,14 @@ const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd' // Visible & Always Passes
       required
     />
   </div>
-  <div id="cf-turnstile" data-sitekey={siteKey}></div>
+  <div class="cf-turnstile" id="cf-turnstile" data-sitekey={siteKey}></div>
   <!-- <Button text="Submit" href="" /> -->
   <ButtonSubmit text="Submit" />
 </form>
+
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+></script>
 
 <script>
   document.addEventListener('astro:page-load', () => {
