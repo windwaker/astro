@@ -1,20 +1,22 @@
 ---
-import Button from "../components/Button.astro";
-import ButtonSubmit from "./ButtonSubmit.astro";
+import Button from '../components/Button.astro'
+import ButtonSubmit from './ButtonSubmit.astro'
+
+const siteKey = '1x00000000000000000000AA' // Visible & Always Passes
 ---
 
 <form action="https://formspree.io/f/xyzgklzo" method="POST">
   <div class="mb-6">
     <label
       for="email"
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
       >Your email</label
     >
     <input
       type="email"
       id="email"
       name="email"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       placeholder="name@email.com"
       required
     />
@@ -22,17 +24,30 @@ import ButtonSubmit from "./ButtonSubmit.astro";
   <div class="mb-6">
     <label
       for="message"
-      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
       >Your Message</label
     >
     <input
       type="text"
       id="message"
       name="message"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       required
     />
   </div>
+  <div id="cf-turnstile" data-sitekey={siteKey}></div>
   <!-- <Button text="Submit" href="" /> -->
   <ButtonSubmit text="Submit" />
 </form>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    // This runs on first page load and after every navigation.
+    turnstile.render('#cf-turnstile', {
+      sitekey: '1x00000000000000000000AA',
+      callback: function (token) {
+        console.log(`Challenge Success ${token}`)
+      },
+    })
+  })
+</script>

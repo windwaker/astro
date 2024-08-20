@@ -1,6 +1,9 @@
 ---
 import data from '../data/site.json'
 import DarkModeToggle from './DarkModeToggle.astro'
+
+import { Image } from 'astro:assets'
+import image_logo from '../assets/logo.png'
 ---
 
 <nav transition:persist class="border-gray-200 bg-stone-100 dark:bg-slate-800">
@@ -8,10 +11,11 @@ import DarkModeToggle from './DarkModeToggle.astro'
     class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
   >
     <a href="/">
+      <Image src={image_logo} alt="LMA Construction" width="50" height="50" />
       <span
         class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
-        >{data.siteName}</span
-      >
+        >{data.siteName}
+      </span>
     </a>
 
     <button
