@@ -25,7 +25,8 @@ import data from '../data/site.json'
       is:inline
       src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
       async
-      defer></script>
+      defer
+    ></script>
     <script is:inline>
       //check for dark mode in local storage using the theme var
       if (localStorage.getItem('theme') === 'dark') {
@@ -70,15 +71,3 @@ import data from '../data/site.json'
     </style>
   </body>
 </html>
-
-<script>
-  document.addEventListener('astro:page-load', () => {
-    // This runs on first page load and after every navigation.
-    turnstile.render('#cf-turnstile', {
-      sitekey: '1x00000000000000000000AA',
-      callback: function (token) {
-        console.log(`Challenge Success ${token}`)
-      },
-    })
-  })
-</script>
