@@ -1,20 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
 
-import HeaderSmall from "../components/HeaderSmall.astro";
-import Form from "../components/Form.astro";
-const title = "Contact Us";
-const subtitle = "Contact us using the form below or find us online!";
+import HeaderSmall from '../components/HeaderSmall.astro'
+import Form from '../components/Form.astro'
+const title = 'Contact Us'
+const description = 'Contact us using the form below or find us online!'
 ---
 
 <Layout title="Contact">
-  <div>
-    <HeaderSmall title={title} subtitle={subtitle} />
-  </div>
   <main>
-    <div class="max-w-md m-auto my-8">
-      <Form />
-    </div>
+    <section class="bg-stone-100 dark:bg-slate-800">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+        <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
+          <h2
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            {title}
+          </h2>
+          <p
+            class="font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16"
+          >
+            {description}
+          </p>
+        </div>
+        <Form />
+      </div>
+    </section>
   </main>
 </Layout>
 

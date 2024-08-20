@@ -18,20 +18,28 @@
       "href": "/team-page"
     },
     {
-      "title": "Projects",
-      "href": "/projects"
+      "title": "About",
+      "href": "/about"
     },
     {
-      "title": "Contact",
-      "href": "/contact"
+      "title": "Mission Statement",
+      "href": "/mission-statement"
+    },
+    {
+      "title": "Our Expertise",
+      "href": "/our-expertise"
+    },
+    {
+      "title": "HSEQ",
+      "href": "/hseq"
     },
     {
       "title": "Our Location",
       "href": "/location"
     },
     {
-      "title": "Mission Statement",
-      "href": "/missionstatement"
+      "title": "Contact Us",
+      "href": "/contact"
     }
   ],
   "social": [

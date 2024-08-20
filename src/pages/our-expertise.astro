@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const title = 'Our Expertise'
+const description = 'What we are good at.'
+---
+
+<Layout title={title}>
+  <main>
+    <section class="bg-stone-100 dark:bg-slate-800">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+        <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
+          <h2
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            {title}
+          </h2>
+          <p
+            class="font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16"
+          >
+            {description}
+          </p>
+        </div>
+        <p class="mb-4 mt-3 pb-8 font-light text-gray-500 dark:text-gray-400">
+          At LMA Construction we strive to be one of Ireland’s leading general
+          building contractors. <br />We strive to deliver each project to the
+          highest possible standards that will meet, and indeed surpass, our
+          Clients expectations. <br />Our team has managed projects ranging in
+          value up to €20m across a range of sectors including commercial,
+          educational, healthcare, residential, pharmaceutical, infrastructure
+          and industrial. Our extensive and wide range of experience combines
+          the best in modern building techniques with the best in traditional
+          craftsmanship. <br />As Managing Partner, Denis is a strong advocate
+          of technology to enhance our Client offering including Programming,
+          Procurement, Project Reporting, and delivery. Denis is experienced in
+          the use of PROCORE, BIM 360, the Microsoft Suite, various planning
+          software and Lean Construction methodologies.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const title = 'About Us'
+const description = 'We are an awesome construction company.'
+---
+
+<Layout title={title}>
+  <main>
+    <section class="bg-stone-100 dark:bg-slate-800">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+        <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
+          <h2
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            {title}
+          </h2>
+          <p
+            class="font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16"
+          >
+            {description}
+          </p>
+        </div>
+        <p class="mb-4 mt-3 pb-8 font-light text-gray-500 dark:text-gray-400">
+          LMA Construction was incorporated to provide high quality construction
+          services to both public and private Clients across the Irish market.
+
+          <br />Led by Denis Lahart and Adrian McAndrew, each with over 25 years
+          construction experience, LMA’s primary mission is to become the
+          Contractor of choice for key repeat Clients. <br />Our company ethos
+          has been developed to provide each of our Clients with a partnership
+          approach. No project can be entirely successful without the complete
+          dedication of all parties. <br />With this in mind, we work hard to
+          eliminate all barriers to success by delivering a transparent, honest
+          and open approach. <br />We appreciate building long-term partnerships
+          with clients and consultancies, enjoying a strong catalogue of repeat
+          business, born out of delivering high quality, on time.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style></style>

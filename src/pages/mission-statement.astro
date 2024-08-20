@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const title = 'Mission Statement'
+const description = 'Who we are as a construction company.'
+---
+
+<Layout title={title}>
+  <main>
+    <section class="bg-stone-100 dark:bg-slate-800">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+        <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
+          <h2
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            {title}
+          </h2>
+          <p
+            class="font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16"
+          >
+            {description}
+          </p>
+        </div>
+        <p class="mb-4 mt-3 pb-8 font-light text-gray-500 dark:text-gray-400">
+          At LMA Contruction, we seek to partner with our Clients with the joint
+          goal of avoiding disruption to the programme while building a strong
+          rapport of trust to ensure the customer journey is seamless and
+          positive. <br />It is our intention to work with each of our Clients
+          on a repeat basis. This can only be achieved through delivering every
+          time, using the right resources supported by the right company
+          processes.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,16 +1,38 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
+
+const title = 'Our Location'
+const description = 'We are located in Coill Dubh, Co. Kildare.'
 ---
 
-<Layout title="Location">
-  <h1>Our Location</h1>
+<Layout title={title}>
+  <main>
+    <section class="bg-stone-100 dark:bg-slate-800">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+        <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
+          <h2
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            {title}
+          </h2>
+          <p
+            class="font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16"
+          >
+            {description}
+          </p>
 
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4768.263243083771!2d-6.825615!3d53.305089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485d87604186e645%3A0xcf6c268dc396a37e!2sCoolearagh%20West%2C%20Co.%20Kildare%2C%20W91%20X5C3%2C%20Ireland!5e0!3m2!1sen!2sus!4v1722372345717!5m2!1sen!2sus"
-    width="600"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4768.263243083771!2d-6.825615!3d53.305089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485d87604186e645%3A0xcf6c268dc396a37e!2sCoolearagh%20West%2C%20Co.%20Kildare%2C%20W91%20X5C3%2C%20Ireland!5e0!3m2!1sen!2sus!4v1722372345717!5m2!1sen!2sus"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
