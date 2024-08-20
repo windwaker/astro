@@ -1,8 +1,5 @@
 ---
-import Button from '../components/Button.astro'
 import ButtonSubmit from './ButtonSubmit.astro'
-
-const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd'
 ---
 
 <form action="https://formspree.io/f/xyzgklzo" method="POST">
@@ -38,7 +35,7 @@ const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd'
   <div
     id="cf-turnstile"
     class="cf-turnstile"
-    data-sitekey={siteKey}
+    data-sitekey="0x4AAAAAAAhrUcfkOZ34u-nd"
     data-theme="light"
   >
   </div>
@@ -52,7 +49,7 @@ const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd'
     turnstile.render('#cf-turnstile', {
       sitekey: '0x4AAAAAAAhrUcfkOZ34u-nd',
       callback: function (token) {
-        //console.log(`Challenge Success ${token}`)
+        //console.log(`siteKey: ${siteKey}`)
       },
     })
   })
