@@ -2,7 +2,7 @@
 import Button from '../components/Button.astro'
 import ButtonSubmit from './ButtonSubmit.astro'
 
-const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd'
+const siteKey = '2x00000000000000000000AB'
 ---
 
 <form action="https://formspree.io/f/xyzgklzo" method="POST">
@@ -35,12 +35,18 @@ const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd'
       required
     />
   </div>
-  <div id="cf-turnstile" data-sitekey={siteKey} data-theme="light"></div>
+  <div
+    id="cf-turnstile"
+    class="cf-turnstile"
+    data-sitekey={siteKey}
+    data-theme="light"
+  >
+  </div>
   <!-- <Button text="Submit" href="" /> -->
   <ButtonSubmit text="Submit" />
 </form>
 
-<script>
+<!-- <script>
   document.addEventListener('astro:page-load', () => {
     // This runs on first page load and after every navigation.
     turnstile.render('#cf-turnstile', {
@@ -50,4 +56,4 @@ const siteKey = '0x4AAAAAAAhrUcfkOZ34u-nd'
       },
     })
   })
-</script>
+</script> -->
