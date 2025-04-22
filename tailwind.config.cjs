@@ -1,18 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
-    "./node_modules/flowbite/**/*.js",
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './node_modules/flowbite/**/*.js',
   ],
   theme: {
     colors: {
-      primary: "#0000ff" /** #17202A */,
-      secondary: "#ff0000" /** ecc94b */,
-      transparent: "transparent",
-      current: "currentColor",
+      primary: '#0000ff' /** #17202A */,
+      secondary: '#ff0000' /** ecc94b */,
+      transparent: 'transparent',
+      current: 'currentColor',
       slate: colors.slate,
       stone: colors.stone,
       blue: colors.blue,
@@ -25,23 +25,27 @@ module.exports = {
       yellow: colors.yellow,
     },
     extend: {
-      translate: ["dark"],
+      translate: ['dark'],
       animation: {
-        "skew-scroll": "skew-scroll 20s linear infinite",
+        'skew-scroll': 'skew-scroll 20s linear infinite',
+      },
+      container: {
+        center: true,
+        padding: '1.5rem',
       },
     },
     keyframes: {
-      "skew-scroll": {
-        "0%": {
+      'skew-scroll': {
+        '0%': {
           transform:
-            "rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)",
+            'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)',
         },
-        "100%": {
+        '100%': {
           transform:
-            "rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)",
+            'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
         },
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
-};
+  plugins: [require('flowbite/plugin')],
+}
